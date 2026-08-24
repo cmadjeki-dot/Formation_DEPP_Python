@@ -1,0 +1,21 @@
+# Analyse et manipulation des donnees
+pandas>=2.2,<3
+numpy>=2.0,<3
+openpyxl>=3.1,<4
+
+# Visualisation
+matplotlib>=3.9,<4
+seaborn>=0.13,<1
+plotly>=5.24,<6
+
+# Jupyter
+jupyterlab>=4.3,<5
+notebook>=7.3,<8
+ipykernel>=6.29,<7
+
+# Qualite et tests
+pytest>=8.3,<9
+ruff>=0.8,<1
+
+# Dashboard (optionnel mais inclus dans l'environnement standard)
+streamlit>=1.40,<2

@@ -1,0 +1,13 @@
+[project]
+name = "formation-depp-python"
+version = "0.1.0"
+description = "Projet DEPP Python pour l'analyse de données"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
