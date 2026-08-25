@@ -32,6 +32,27 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Debug - list repo and public files
+        run: |
+          echo "== Git status =="
+          git status --porcelain || true
+          echo "== Repo root listing =="
+          ls -la || true
+          echo "== outputs/figures listing =="
+          if [ -d "outputs/figures" ]; then
+            ls -la outputs/figures || true
+          else
+            echo "outputs/figures does not exist"
+          fi
+          echo "== public listing =="
+          ls -la public || true
+          echo "== gallery head (first 40 lines) =="
+          if [ -f outputs/figures/gallery.html ]; then
+            head -n 40 outputs/figures/gallery.html || true
+          else
+            echo "gallery.html not found at outputs/figures/gallery.html"
+          fi
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
