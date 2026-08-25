@@ -1,4 +1,4 @@
-name: Deploy gallery to GitHub Pages
+name: Deploy gallery to gh-pages branch
 
 on:
   push:
@@ -10,31 +10,32 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy gallery files to public
+      - name: Prepare public directory
         run: |
           echo "Copying outputs/figures to public/"
+          rm -rf public || true
           mkdir -p public
-          # Try to copy all files if directory exists
           if [ -d "outputs/figures" ]; then
             cp -r outputs/figures/* public/ || true
           else
             echo "outputs/figures not found"
           fi
 
-      - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v1
+      - name: Setup Node (required by some gh-pages actions)
+        uses: actions/setup-node@v4
         with:
-          path: ./public
+          node-version: '18'
 
-  publish:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          keep_files: true
