@@ -1,0 +1,40 @@
+name: Deploy gallery to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy gallery files to public
+        run: |
+          echo "Copying outputs/figures to public/"
+          mkdir -p public
+          # Try to copy all files if directory exists
+          if [ -d "outputs/figures" ]; then
+            cp -r outputs/figures/* public/ || true
+          else
+            echo "outputs/figures not found"
+          fi
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
+
+  publish:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
