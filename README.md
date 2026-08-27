@@ -18,6 +18,69 @@ Projet pédagogique de production statistique publique appliquée à l’évalua
 - `tests/` : tests automatisés
 - `outputs/` : figures, modèles et rapports
 
+## Architecture cible finale
+
+L'organisation cible du projet est la suivante :
+
+```text
+Formation_DEPP_Python
+│
+├── dashboard
+│   └── app.py
+│
+├── data
+│   ├── external
+│   ├── raw
+│   ├── interim
+│   └── processed
+│
+├── docs
+│   └── rapport_final.md
+│
+├── notebooks
+│   ├── 00_cadrage_du_projet.ipynb
+│   ├── 01_generation_ou_acquisition_des_donnees.ipynb
+│   ├── 02_importation_et_description.ipynb
+│   ├── 03_controle_qualite.ipynb
+│   ├── 04_nettoyage_et_valeurs_manquantes.ipynb
+│   ├── 05_analyse_descriptive.ipynb
+│   ├── 06_modelisation.ipynb
+│   ├── 07_analyse_specialisee.ipynb
+│   ├── 08_analyse_longitudinale.ipynb
+│   ├── 09_analyse_causale.ipynb
+│   ├── 10_indicateurs_decisionnels.ipynb
+│   ├── 11_restitution_decisionnelle.ipynb
+│   ├── 12_pipeline_complet.ipynb
+│   └── 13_presentation_orale_finale.ipynb
+│
+├── outputs
+│   ├── figures
+│   ├── logs
+│   ├── models
+│   ├── reports
+│   └── tables
+│
+├── src
+│   ├── analysis
+│   ├── data
+│   ├── modeling
+│   ├── quality
+│   ├── reporting
+│   ├── utils
+│   └── visualization
+│
+├── tests
+│
+├── .gitignore
+├── LICENSE
+├── pyproject.toml
+├── README.md
+└── requirements.txt
+```
+
+Cette arborescence décrit la séparation entre les données, les analyses,
+la modélisation, la qualité, la visualisation et les restitutions.
+
 ## Environnement
 
 Le projet utilise un environnement virtuel local dans :
