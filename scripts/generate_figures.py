@@ -1,11 +1,17 @@
+import sys
 from pathlib import Path
+
 import matplotlib
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from src.data.loader import data_path, load_csv
 
-ROOT = Path.cwd()
 fig_dir = ROOT / 'outputs' / 'figures'
 fig_dir.mkdir(parents=True, exist_ok=True)
 
@@ -15,10 +21,7 @@ if not Path(clean_path).exists():
     # fallback to raw
     clean_path = data_path('src', 'data', 'raw', 'etude_lecture_6e.csv')
 
-try:
-    df = load_csv(clean_path)
-except Exception:
-    df = pd.read_csv(clean_path)
+df = load_csv(clean_path)
 
 # 1. Mean score by PCS
 if 'pcs' in df.columns and 'score_lecture' in df.columns:

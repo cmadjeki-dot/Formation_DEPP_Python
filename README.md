@@ -9,9 +9,9 @@ Projet pédagogique de production statistique publique appliquée à l’évalua
 ## Structure du projet
 
 - `dashboard/` : application Streamlit de restitution
-- `data/raw/` : données brutes simulées
-- `data/interim/` : données nettoyées intermédiaires
-- `data/processed/` : données prêtes à l’analyse
+- `src/data/raw/` : données brutes simulées
+- `src/data/interim/` : données nettoyées intermédiaires
+- `data/processed/` : emplacement réservé aux données prêtes à l’analyse
 - `docs/` : documentation et rapport final
 - `notebooks/` : séquence d’analyse complète
 - `src/` : code réutilisable Python
@@ -20,14 +20,14 @@ Projet pédagogique de production statistique publique appliquée à l’évalua
 
 ## Environnement
 
-Le projet est prêt avec un environnement virtuel fonctionnel dans :
+Le projet utilise un environnement virtuel local dans :
 
-- `C:\depp\.venv\Scripts\python.exe`
+- `C:\Users\admin\Desktop\Formation_DEPP_Python\.venv\Scripts\python.exe`
 
 ## Démarrage
 
 1. Ouvrir VS Code.
-2. Sélectionner l’interpréteur `C:\depp\.venv\Scripts\python.exe`.
+2. Sélectionner l’interpréteur `.venv\Scripts\python.exe`.
 3. Ouvrir un notebook dans `notebooks/`.
 4. Choisir le kernel `Python (Formation DEPP)`.
 5. Lancer le notebook `12_pipeline_complet.ipynb` pour exécuter la chaîne complète.

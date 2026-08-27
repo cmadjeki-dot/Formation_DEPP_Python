@@ -1,7 +1,6 @@
-import pandas as pd
 import streamlit as st
 
-from src.data.loader import load_csv, data_path
+from src.data.loader import data_path, load_csv
 
 st.set_page_config(page_title="DEPP Dashboard", page_icon="📊")
 st.title("Dashboard DEPP — Lecture 6e")

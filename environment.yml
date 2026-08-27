@@ -2,7 +2,7 @@ name: formation-depp-python
 channels:
   - conda-forge
 dependencies:
-  - python=3.13
+  - python=3.14
   - pip
   - pip:
       - -r requirements.txt

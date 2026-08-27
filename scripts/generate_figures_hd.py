@@ -1,13 +1,20 @@
+import sys
 from pathlib import Path
+
 import matplotlib
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
 import numpy as np
+import pandas as pd
+import seaborn as sns
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from src.data.loader import data_path, load_csv
 
-ROOT = Path.cwd()
 fig_dir = ROOT / 'outputs' / 'figures'
 fig_dir.mkdir(parents=True, exist_ok=True)
 
@@ -16,10 +23,7 @@ clean_path = data_path('data', 'interim', 'etude_lecture_6e_clean.csv')
 if not Path(clean_path).exists():
     clean_path = data_path('data', 'raw', 'etude_lecture_6e.csv')
 
-try:
-    df = load_csv(clean_path)
-except Exception:
-    df = pd.read_csv(clean_path)
+df = load_csv(clean_path)
 
 # Ensure numeric columns
 if 'score_lecture' in df.columns:
