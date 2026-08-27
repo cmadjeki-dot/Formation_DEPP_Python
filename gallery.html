@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery — Figures DEPP Project</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    h1 { margin-bottom: 8px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 16px; }
+    .card { width: 320px; border: 1px solid #ddd; padding: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+    .card img { max-width: 100%; height: auto; display:block; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: #333; }
+    .links a { margin-right: 8px; color: #0066cc; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Galerie des figures — Formation_DEPP_Python</h1>
+  <p>Fichiers disponibles dans ce dossier (PNG et PDF). Clique sur une vignette pour ouvrir l'image en taille réelle.</p>
+  <div class="grid">
+
+    <div class="card">
+      <a href="score_par_pcs_hd.png"><img src="score_par_pcs_hd.png" alt="Score moyen par PCS (HD)"></a>
+      <div class="meta">score_par_pcs_hd.png • <span class="links"><a href="score_par_pcs_hd.png">PNG</a><a href="score_par_pcs_hd.pdf">PDF</a></span></div>
+    </div>
+
+    <div class="card">
+      <a href="distribution_score_lecture_hd.png"><img src="distribution_score_lecture_hd.png" alt="Distribution score lecture (HD)"></a>
+      <div class="meta">distribution_score_lecture_hd.png • <span class="links"><a href="distribution_score_lecture_hd.png">PNG</a><a href="distribution_score_lecture_hd.pdf">PDF</a></span></div>
+    </div>
+
+    <div class="card">
+      <a href="boxplot_score_by_pcs_hd.png"><img src="boxplot_score_by_pcs_hd.png" alt="Boxplot score par PCS (HD)"></a>
+      <div class="meta">boxplot_score_by_pcs_hd.png • <span class="links"><a href="boxplot_score_by_pcs_hd.png">PNG</a><a href="boxplot_score_by_pcs_hd.pdf">PDF</a></span></div>
+    </div>
+
+    <div class="card">
+      <a href="scatter_score_vs_ressources_hd.png"><img src="scatter_score_vs_ressources_hd.png" alt="Scatter score vs ressources (HD)"></a>
+      <div class="meta">scatter_score_vs_ressources_hd.png • <span class="links"><a href="scatter_score_vs_ressources_hd.png">PNG</a><a href="scatter_score_vs_ressources_hd.pdf">PDF</a></span></div>
+    </div>
+
+    <div class="card">
+      <a href="correlation_heatmap_hd.png"><img src="correlation_heatmap_hd.png" alt="Correlation heatmap (HD)"></a>
+      <div class="meta">correlation_heatmap_hd.png • <span class="links"><a href="correlation_heatmap_hd.png">PNG</a><a href="correlation_heatmap_hd.pdf">PDF</a></span></div>
+    </div>
+
+    <div class="card">
+      <a href="score_par_pcs.png"><img src="score_par_pcs.png" alt="Score moyen par PCS (standard)"></a>
+      <div class="meta">score_par_pcs.png</div>
+    </div>
+
+    <div class="card">
+      <a href="distribution_score_lecture.png"><img src="distribution_score_lecture.png" alt="Distribution score lecture (standard)"></a>
+      <div class="meta">distribution_score_lecture.png</div>
+    </div>
+
+    <div class="card">
+      <a href="boxplot_score_by_sexe.png"><img src="boxplot_score_by_sexe.png" alt="Boxplot score by sexe"></a>
+      <div class="meta">boxplot_score_by_sexe.png</div>
+    </div>
+
+  </div>
+
+  <hr>
+  <p>Généré automatiquement. Pour régénérer les figures, exécute <code>scripts/generate_figures.py</code> ou <code>scripts/generate_figures_hd.py</code> dans le venv.</p>
+</body>
+</html>
