@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formation DEPP — Restitution</title><style>
+body{font-family:system-ui,Arial;margin:0;background:#f5f7fb;color:#172033}main{max-width:1180px;margin:auto;padding:32px}
+header{background:#123b63;color:white;padding:36px;border-radius:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+article,.panel{background:white;padding:18px;border-radius:10px;box-shadow:0 2px 8px #0001}img{width:100%;height:220px;object-fit:contain}
+a{color:#075ca8}.kpi{font-size:1.5rem;font-weight:bold}
+</style></head><body><main><header><h1>Formation DEPP Python</h1>
+<p>Mini-site de restitution de l'étude sur la lecture en 6e.</p>
+<p><a href="https://github.com/cmadjeki-dot/Formation_DEPP_Python" style="color:white">Voir le dépôt GitHub</a>
+ · <a href="https://streamlit.io/cloud" style="color:white">Déployer le dashboard Streamlit</a></p></header>
+<section class="panel"><h2>Indicateurs principaux</h2><div class="grid">
+<div><div class="kpi">15,015</div>élèves</div><div><div class="kpi">66.96</div>score moyen</div>
+<div><div class="kpi">18.1%</div>avec retard</div></div></section>
+<h2>Galerie des graphiques</h2><section class="grid"><article><h3>Score moyen par PCS</h3><img src="figures/score_par_pcs_hd.png" alt="Score moyen par PCS"><p>Les écarts de score sont présentés par catégorie socioprofessionnelle.</p></article>
+<article><h3>Distribution des scores</h3><img src="figures/distribution_score_lecture_hd.png" alt="Distribution des scores"><p>La distribution décrit la dispersion des performances observées.</p></article>
+<article><h3>Dispersion par PCS</h3><img src="figures/boxplot_score_by_pcs_hd.png" alt="Dispersion par PCS"><p>Le boxplot compare médianes et dispersion entre PCS.</p></article>
+<article><h3>Score et ressources numériques</h3><img src="figures/scatter_score_vs_ressources_hd.png" alt="Score et ressources numériques"><p>Relation descriptive entre ressources numériques et score.</p></article>
+<article><h3>Matrice de corrélation</h3><img src="figures/correlation_heatmap_hd.png" alt="Matrice de corrélation"><p>Corrélations entre variables numériques de la base.</p></article></section>
+<section class="panel"><h2>Tableaux principaux</h2><ul><li><a href="tables/scores_par_pcs.html">Scores Par Pcs</a></li>
+<li><a href="tables/scores_par_sexe.html">Scores Par Sexe</a></li>
+<li><a href="tables/scores_par_retard.html">Scores Par Retard</a></li></ul>
+<p><a href="reports/rapport_synthese.html">Lire le rapport de synthèse</a> · <a href="https://github.com/cmadjeki-dot/Formation_DEPP_Python/tree/main/notebooks">Consulter les notebooks</a></p></section>
+<footer><p>Projet pédagogique — données simulées — génération reproductible par <code>scripts/build_static_site.py</code>.</p></footer>
+</main></body></html>

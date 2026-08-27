@@ -52,6 +52,15 @@ Le projet utilise un environnement virtuel local dans :
 
 - [docs/rapport_final.md](docs/rapport_final.md)
 
+## Consulter les résultats
+
+- **Dashboard interactif** : lancer `.venv\Scripts\python.exe -m streamlit run dashboard\app.py`, puis ouvrir <http://localhost:8501>.
+- **Galerie statique** : ouvrir [site/index.html](site/index.html) localement ou le site GitHub Pages après activation de la publication.
+- **Tableaux HTML** : voir [outputs/tables](outputs/tables).
+- **Rapport de synthèse** : voir [outputs/reports/rapport_synthese.html](outputs/reports/rapport_synthese.html).
+- **Notebooks** : voir [notebooks](notebooks).
+- **Méthodologie** : voir [docs/rapport_final.md](docs/rapport_final.md).
+
 ## Validation
 
 Les tests du module de simulation de données passent avec succès.

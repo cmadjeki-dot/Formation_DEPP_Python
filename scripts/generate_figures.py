@@ -16,7 +16,7 @@ fig_dir = ROOT / 'outputs' / 'figures'
 fig_dir.mkdir(parents=True, exist_ok=True)
 
 # Load cleaned data
-clean_path = data_path('data', 'interim', 'etude_lecture_6e_clean.csv')
+clean_path = data_path('src', 'data', 'interim', 'etude_lecture_6e_clean.csv')
 if not Path(clean_path).exists():
     # fallback to raw
     clean_path = data_path('src', 'data', 'raw', 'etude_lecture_6e.csv')
